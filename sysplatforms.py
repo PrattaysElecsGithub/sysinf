@@ -1,7 +1,68 @@
 import platform
-import pwd
-import os
+import getpass
 
-# todo: continue, you are making a py lib for returning system info.
-# url 1: https://chat.openai.com/c/6cdd5f68-7317-407a-83ec-7e6cf12bea43
-# url 2: https://chat.openai.com/c/b2248b97-7d39-4200-a6bd-212adc13f61e
+
+class windows:
+    @staticmethod
+    def getosrelease():
+        return str(platform.release())
+
+    @staticmethod
+    def getosversion():
+        return str(platform.version())
+
+    @staticmethod
+    def getosprocesser():
+        return str(platform.processor())
+
+    @staticmethod
+    def getosarchitecture():
+        return str(platform.architecture())
+
+    @staticmethod
+    def getosusername():
+        return str(getpass.getuser())
+
+
+class macos:
+    @staticmethod
+    def getosrelease():
+        return str(platform.release())
+
+    @staticmethod
+    def getosversion():
+        return str(platform.mac_ver()[0])
+
+    @staticmethod
+    def getosprocessor():
+        return str(platform.processor())
+
+    @staticmethod
+    def getosarchitecture():
+        return str(platform.processor())
+
+
+class linux:
+    @staticmethod
+    def getosdistro():
+        return str(platform.linux_distribution())
+
+    @staticmethod
+    def getosrelease():
+        return str(platform.release())
+
+    @staticmethod
+    def getosversion():
+        return str(platform.dist()[1])
+
+    @staticmethod
+    def getosprocessor():
+        return str(platform.processor())
+
+    @staticmethod
+    def getosarchitecture():
+        return str(platform.machine())
+
+    @staticmethod
+    def getosusername():
+        return str(getpass.getuser())
