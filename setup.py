@@ -3,14 +3,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='math_operations',
-    version='0.1',
+    name='sysinf',
+    version='1.0',
     packages=find_packages(),
     install_requires=[],
     description='A simple library for getting system info.',
     author='Prattay Sarkar',
     author_email='orginalprattayelec@gmail.com',
-    url='https://github.com/yourusername/math_operations',
+    url='https://github.com/PrattaysElecsGithub/sysinf',
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
